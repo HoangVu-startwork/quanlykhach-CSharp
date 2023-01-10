@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{778BDE0A-EED3-4747-AF52-4EB6AF2437AF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>quanlykhach</RootNamespace>
+    <AssemblyName>quanlykhach</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel, Version=1.11.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.0.12051, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Interfaces, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=1.4.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.1.4.0\lib\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=2.32.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.2.32.1\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.32.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.2.32.1\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAOCAOTHONGKE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAOTHONGKE.Designer.cs">
+      <DependentUpon>BAOCAOTHONGKE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAMNHATTAIKHOAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAMNHATTAIKHOAN.Designer.cs">
+      <DependentUpon>CAMNHATTAIKHOAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COSOVATCHAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COSOVATCHAT.Designer.cs">
+      <DependentUpon>COSOVATCHAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoogleHook.cs" />
+    <Compile Include="GooleSearchSteps.cs" />
+    <Compile Include="HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HOIVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HOIVIEN.Designer.cs">
+      <DependentUpon>HOIVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KHACHHANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHACHHANG.Designer.cs">
+      <DependentUpon>KHACHHANG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LUONGPHONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LUONGPHONG.Designer.cs">
+      <DependentUpon>LUONGPHONG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NGAYTHANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NGAYTHANG.Designer.cs">
+      <DependentUpon>NGAYTHANG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NGUOIOCUNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NGUOIOCUNG.Designer.cs">
+      <DependentUpon>NGUOIOCUNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NHANVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NHANVIEN.Designer.cs">
+      <DependentUpon>NHANVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QUANLYDANGKYTHUEPHONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QUANLYDANGKYTHUEPHONG.Designer.cs">
+      <DependentUpon>QUANLYDANGKYTHUEPHONG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhachSan12DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSan12DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhachSan12DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSan12DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhachSan12DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSan12DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhachSan12DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSan12DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhachSan12DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSan12DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHACHSANDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYKHACHSANDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYPHONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QUANLYPHONG.Designer.cs">
+      <DependentUpon>QUANLYPHONG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYPHONG2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QUANLYPHONG2.Designer.cs">
+      <DependentUpon>QUANLYPHONG2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYTHONGTINNHANPHONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QUANLYTHONGTINNHANPHONG.Designer.cs">
+      <DependentUpon>QUANLYTHONGTINNHANPHONG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadExcel.cs" />
+    <EmbeddedResource Include="BAOCAOTHONGKE.resx">
+      <DependentUpon>BAOCAOTHONGKE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAMNHATTAIKHOAN.resx">
+      <DependentUpon>CAMNHATTAIKHOAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COSOVATCHAT.resx">
+      <DependentUpon>COSOVATCHAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HOIVIEN.resx">
+      <DependentUpon>HOIVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KHACHHANG.resx">
+      <DependentUpon>KHACHHANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LUONGPHONG.resx">
+      <DependentUpon>LUONGPHONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NGAYTHANG.resx">
+      <DependentUpon>NGAYTHANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NGUOIOCUNG.resx">
+      <DependentUpon>NGUOIOCUNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NHANVIEN.resx">
+      <DependentUpon>NHANVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QUANLYDANGKYTHUEPHONG.resx">
+      <DependentUpon>QUANLYDANGKYTHUEPHONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QUANLYPHONG.resx">
+      <DependentUpon>QUANLYPHONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QUANLYPHONG2.resx">
+      <DependentUpon>QUANLYPHONG2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QUANLYTHONGTINNHANPHONG.resx">
+      <DependentUpon>QUANLYTHONGTINNHANPHONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="GooleSearch.feature" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QuanLyKhachSan12DataSet.xsc">
+      <DependentUpon>QuanLyKhachSan12DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhachSan12DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet.xss">
+      <DependentUpon>QuanLyKhachSan12DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet1.xsc">
+      <DependentUpon>QuanLyKhachSan12DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhachSan12DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet1.xss">
+      <DependentUpon>QuanLyKhachSan12DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet2.xsc">
+      <DependentUpon>QuanLyKhachSan12DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhachSan12DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet2.xss">
+      <DependentUpon>QuanLyKhachSan12DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet3.xsc">
+      <DependentUpon>QuanLyKhachSan12DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhachSan12DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet3.xss">
+      <DependentUpon>QuanLyKhachSan12DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet4.xsc">
+      <DependentUpon>QuanLyKhachSan12DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhachSan12DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhachSan12DataSet4.xss">
+      <DependentUpon>QuanLyKhachSan12DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYKHACHSANDataSet.xsc">
+      <DependentUpon>QUANLYKHACHSANDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYKHACHSANDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLYKHACHSANDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLYKHACHSANDataSet.xss">
+      <DependentUpon>QUANLYKHACHSANDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TestData\TestData.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
